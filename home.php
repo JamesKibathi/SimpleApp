@@ -9,8 +9,9 @@
 		exit;
 	}
 	// select loggedin users detail
-	$res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
-	$userRow=mysql_fetch_array($res);
+        $sql="SELECT * FROM users WHERE userId=".$_SESSION['user'];
+	$res=mysqli_query($con,$sql);
+	$userRow=mysqli_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,8 +37,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Back to Article</a></li>
-            <li><a href="http://www.codingcage.com/search/label/jQuery">jQuery</a></li>
-            <li><a href="http://www.codingcage.com/search/label/PHP">PHP</a></li>
+            <li><a href="http://www.junkinreallife.com/search/label/jQuery">jQuery</a></li>
+            <li><a href="http://www.junkinreallife.com/search/label/PHP">PHP</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             
@@ -58,7 +59,7 @@
 	<div class="container">
     
     	<div class="page-header">
-    	<h3>Coding Cage - Programming Blog</h3>
+    	<h3>Jwiki - Web design Company</h3>
     	</div>
         
         <div class="row">
